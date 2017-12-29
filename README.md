@@ -62,7 +62,7 @@ npm i --save-dev loaders.css
  loader.start();  // 开始动画
  loader.stop(); // 停止动画
  loader.close(); // 关闭
- loader.time(millisec); // 延时关闭
+ loader.timeout(millisec); // 延时关闭
  
 ```
 

@@ -1,0 +1,31 @@
+// ## custom vars
+$primary-color: rgb(0, 222, 255);
+//$ball-size: 15px;
+//$margin: 2px;
+//$line-height: 35px;
+//$line-width: 4px;
+
+// ## loaders.css
+@import "loaders";
+
+// ## layout
+.loaders {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .35);
+  z-index: 99999999; // TOP
+
+  &.fixed {
+    position: fixed;
+  }
+
+  .loader {
+    flex-shrink: 1;
+  }
+}

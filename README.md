@@ -30,6 +30,42 @@ npm i --save-dev loaders.css
 
 ### Usage
 
+##### window.Loader
+- Include `loaders.s.min.css`, `loaders.s.min.js`
+```js
+
+ /**
+  * ## settings
+  */
+
+ // 随机动画
+ var loader1 = Loader('freestyle'); // or Loader()
+ // 指定动画
+ var loader2 = Loader('pacman'); // 动画名 Loader.animations
+ // 参数设置
+ var started = true; // 是否立即开始
+ var loader3 = Loader('freestyle', {
+  time: 5000, // >0 毫秒
+  position: 'fixed', // 定位方式 可选 'absolute'
+  body: 'body' // 挂载位置
+ }, started)
+
+ /**
+  * methods
+  */
+ 
+ // 移除所有动画
+ Loader.clear();  // static
+
+ // 创建实例
+ var loader = Loader();
+ loader.start();  // 开始动画
+ loader.stop(); // 停止动画
+ loader.close(); // 关闭
+ loader.time(millisec); // 延时关闭
+ 
+```
+
 ##### Standard
 - Include `loaders.min.css`
 - Create an element and add the animation class (e.g. `<div class="loader-inner ball-pulse"></div>`)
